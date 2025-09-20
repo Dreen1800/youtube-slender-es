@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const FACEBOOK_PARAM_PASS = 'Zkxidj6qY8JKKyK';
 
 const domainMap: Record<string, string> = {
-  'as.todaymoneyclub.com': 'v1',
+  'sd.todaymoneyclub.com': 'v1',
 };
 
 export function middleware(req: NextRequest) {
