@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Black Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+        .method {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .url {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 14px;
+            word-break: break-all;
+            margin: 10px 0;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .warning {
+            background: rgba(255, 152, 0, 0.2);
+            border-left: 4px solid #FF9800;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Teste do Black Content</h1>
+    
+    <div class="card">
+        <h2>📋 Métodos de Teste Disponíveis</h2>
+        
+        <div class="method">
+            <h3>🎯 Método 1: Teste Local (Recomendado)</h3>
+            <p><strong>Bypassa todos os filtros</strong></p>
+            <div class="url" id="localTest">http://localhost:3000?test=KBC4fEgoQIFGBlrk</div>
+            <button onclick="openUrl('localTest')">🚀 Testar Agora</button>
+        </div>
+
+        <div class="method">
+            <h3>🔗 Método 2: Cookie do Facebook</h3>
+            <p><strong>Step 1:</strong> Criar cookie válido</p>
+            <div class="url" id="fbStep1">http://localhost:3000?cat=Zkxidj6qY8JKKyK</div>
+            <button onclick="openUrl('fbStep1')">📝 Step 1: Criar Cookie</button>
+            
+            <p><strong>Step 2:</strong> Acessar normalmente</p>
+            <div class="url" id="fbStep2">http://localhost:3000</div>
+            <button onclick="openUrl('fbStep2')">🎯 Step 2: Testar</button>
+        </div>
+
+        <div class="method">
+            <h3>📱 Método 3: Simulação Mobile + FB</h3>
+            <p><strong>Simula tráfego real do Facebook mobile</strong></p>
+            <div class="url" id="mobileTest">http://localhost:3000?cat=Zkxidj6qY8JKKyK&fbclid=test</div>
+            <button onclick="simulateMobile()">📱 Simular Mobile</button>
+        </div>
+
+        <div class="method">
+            <h3>🟡 Método 4: Testar Gray Content</h3>
+            <p><strong>Funil completo com vídeo diferente (Layer 2)</strong></p>
+            <div class="url" id="grayTest">http://localhost:3000?cat=Zkxidj6qY8JKKyK</div>
+            <button onclick="testGrayContent()">🎯 Testar Gray Content</button>
+            <p><small>💡 Use dispositivo desktop para simular Gray Content</small></p>
+        </div>
+    </div>
+
+    <div class="warning">
+        <h3>⚠️ Importante:</h3>
+        <ul>
+            <li><strong>Método 1</strong> é o mais fácil para desenvolvimento</li>
+            <li><strong>Método 2</strong> testa o fluxo real do Facebook</li>
+            <li><strong>Método 3</strong> simula a experiência completa</li>
+            <li>Para testar filtros, remova os parâmetros especiais</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🔍 Verificar Layer Atual</h2>
+        <p>Abra o <strong>Console do Browser (F12)</strong> para ver:</p>
+        <div class="url">User layer determined: 1/2/3</div>
+        <ul>
+            <li><strong>Layer 1:</strong> White Content (bloqueado - página básica)</li>
+            <li><strong>Layer 2:</strong> <strong style="color: #FF9800;">GRAY CONTENT</strong> (funil completo + vídeo diferente)</li>
+            <li><strong>Layer 3:</strong> <strong style="color: #4CAF50;">BLACK CONTENT</strong> (funil completo + vídeo original)</li>
+        </ul>
+    </div>
+
+    <script>
+        function openUrl(elementId) {
+            const url = document.getElementById(elementId).textContent;
+            window.open(url, '_blank');
+        }
+
+        function simulateMobile() {
+            const url = document.getElementById('mobileTest').textContent;
+            // Abre em nova aba com dica para usar dev tools mobile
+            const newWindow = window.open(url, '_blank');
+            
+            setTimeout(() => {
+                alert('💡 Dica: Abra F12 → Toggle Device Toolbar (📱) para simular mobile!');
+            }, 1000);
+        }
+
+        function testGrayContent() {
+            const url = document.getElementById('grayTest').textContent;
+            // Abre em nova aba 
+            const newWindow = window.open(url, '_blank');
+            
+            setTimeout(() => {
+                alert('🟡 Gray Content: Funil completo com vídeo diferente!\n\n' +
+                      'Você deve ver:\n' +
+                      '• Home → Quiz → Final (funil completo)\n' +
+                      '• Vídeo diferente na página final\n' +
+                      '• Cor âmbar no saldo\n' +
+                      '• "Premium Microtasks" no título');
+            }, 1000);
+        }
+
+        // Status checker
+        function checkStatus() {
+            console.log('🧪 Teste do Black Content carregado!');
+            console.log('📋 Use os botões acima para testar diferentes layers');
+        }
+
+        checkStatus();
+    </script>
+</body>
+</html>
