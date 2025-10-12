@@ -18,6 +18,12 @@ import {
   Users,
   BarChart,
   Layers,
+  PlayCircle,
+  Trophy,
+  Target,
+  Rocket,
+  TrendingUp,
+  DollarSign,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -222,6 +228,32 @@ export default function WhiteContent() {
           </div>
         </section>
 
+        {/* Stats Section */}
+        <section className="w-full py-16 md:py-24 bg-gradient-to-b from-muted/30 to-background">
+          <div className="container px-4 md:px-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+              {[
+                { number: "5,000+", label: "Active Students" },
+                { number: "50M+", label: "Views Generated" },
+                { number: "100K+", label: "Subscribers Gained" },
+                { number: "4.9/5", label: "Average Rating" },
+              ].map((stat, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="text-center"
+                >
+                  <p className="text-4xl md:text-5xl font-bold text-red-600 mb-2">{stat.number}</p>
+                  <p className="text-sm md:text-base text-muted-foreground">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section id="features" className="w-full py-20 md:py-32">
           <div className="container px-4 md:px-6">
@@ -258,6 +290,324 @@ export default function WhiteContent() {
                   </Card>
                 </motion.div>
               ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Course Curriculum Section */}
+        <section className="w-full py-20 md:py-32 bg-muted/30">
+          <div className="container px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Complete Course Curriculum</h2>
+              <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
+                Over 50 hours of content divided into 8 comprehensive modules
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-4">
+              {[
+                {
+                  module: "Module 1",
+                  title: "YouTube Foundation & Channel Setup",
+                  lessons: "12 lessons • 4.5 hours",
+                  icon: <Rocket className="size-6" />,
+                  topics: ["Channel branding", "Niche selection", "Equipment basics", "YouTube Studio walkthrough"]
+                },
+                {
+                  module: "Module 2",
+                  title: "Content Strategy & Viral Video Formula",
+                  lessons: "15 lessons • 6 hours",
+                  icon: <Target className="size-6" />,
+                  topics: ["Viral video psychology", "Trending topic research", "Content calendar creation", "Video ideation techniques"]
+                },
+                {
+                  module: "Module 3",
+                  title: "Video Production Mastery",
+                  lessons: "18 lessons • 7 hours",
+                  icon: <PlayCircle className="size-6" />,
+                  topics: ["Filming techniques", "Audio quality", "Lighting setup", "Editing workflows"]
+                },
+                {
+                  module: "Module 4",
+                  title: "YouTube SEO & Algorithm Secrets",
+                  lessons: "10 lessons • 5 hours",
+                  icon: <TrendingUp className="size-6" />,
+                  topics: ["Keyword research", "Title optimization", "Tag strategies", "Algorithm understanding"]
+                },
+                {
+                  module: "Module 5",
+                  title: "Thumbnail & Title Psychology",
+                  lessons: "8 lessons • 3.5 hours",
+                  icon: <Zap className="size-6" />,
+                  topics: ["Click-worthy thumbnails", "A/B testing", "Color psychology", "Design principles"]
+                },
+                {
+                  module: "Module 6",
+                  title: "Audience Growth & Engagement",
+                  lessons: "14 lessons • 5.5 hours",
+                  icon: <Users className="size-6" />,
+                  topics: ["Community building", "Comment strategies", "Collaboration tactics", "Cross-promotion"]
+                },
+                {
+                  module: "Module 7",
+                  title: "Monetization & Revenue Streams",
+                  lessons: "16 lessons • 6.5 hours",
+                  icon: <DollarSign className="size-6" />,
+                  topics: ["AdSense optimization", "Sponsorship deals", "Affiliate marketing", "Digital products"]
+                },
+                {
+                  module: "Module 8",
+                  title: "Analytics & Scaling Your Channel",
+                  lessons: "12 lessons • 5 hours",
+                  icon: <Trophy className="size-6" />,
+                  topics: ["Data interpretation", "Growth metrics", "Team building", "Automation strategies"]
+                },
+              ].map((module, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.05 }}
+                >
+                  <Card className="overflow-hidden border-border/40 bg-background hover:shadow-lg transition-all">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="size-12 rounded-lg bg-red-600/10 flex items-center justify-center text-red-600 shrink-0">
+                          {module.icon}
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="text-sm font-semibold text-red-600">{module.module}</span>
+                            <span className="text-xs text-muted-foreground">{module.lessons}</span>
+                          </div>
+                          <h3 className="text-lg font-bold mb-3">{module.title}</h3>
+                          <div className="flex flex-wrap gap-2">
+                            {module.topics.map((topic, j) => (
+                              <span key={j} className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
+                                {topic}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-center mt-12"
+            >
+              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-600/10 text-red-600 font-semibold">
+                <Trophy className="size-5" />
+                <span>50+ Hours of Content • Lifetime Updates Included</span>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section id="testimonials" className="w-full py-20 md:py-32">
+          <div className="container px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Success Stories From Our Students</h2>
+              <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
+                Real results from real creators who transformed their channels
+              </p>
+            </motion.div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+              {[
+                {
+                  name: "Sarah Johnson",
+                  channel: "Tech Tips Daily",
+                  result: "0 to 250K subscribers in 8 months",
+                  quote: "This course gave me the exact roadmap I needed. My channel went from zero to monetized in just 3 months, and now I'm making $8K/month from YouTube alone!",
+                  avatar: "SJ"
+                },
+                {
+                  name: "Michael Chen",
+                  channel: "Finance Freedom",
+                  result: "100K to 1M subscribers in 1 year",
+                  quote: "The monetization module alone was worth 10x the course price. I implemented the strategies and tripled my revenue within 60 days.",
+                  avatar: "MC"
+                },
+                {
+                  name: "Emma Rodriguez",
+                  channel: "Cooking with Emma",
+                  result: "5K to 500K subscribers",
+                  quote: "I was stuck at 5,000 subscribers for 2 years. After applying the viral video formula from Module 2, I gained 495K subscribers in just 10 months!",
+                  avatar: "ER"
+                },
+                {
+                  name: "David Kim",
+                  channel: "Fitness Pro",
+                  result: "First video hit 2M views",
+                  quote: "The thumbnail psychology section is pure gold. My first video after the course hit 2 million views and changed my life forever.",
+                  avatar: "DK"
+                },
+                {
+                  name: "Lisa Anderson",
+                  channel: "Travel Adventures",
+                  result: "Making $15K/month",
+                  quote: "I quit my 9-5 job thanks to this course. Now I'm traveling the world full-time and making $15K per month from my YouTube channel.",
+                  avatar: "LA"
+                },
+                {
+                  name: "James Wilson",
+                  channel: "Gaming Legends",
+                  result: "800K subscribers gained",
+                  quote: "Best investment I ever made. The community alone is worth it - I've collaborated with other students and grown my channel to 800K subscribers.",
+                  avatar: "JW"
+                },
+              ].map((testimonial, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.05 }}
+                >
+                  <Card className="h-full overflow-hidden border-border/40 bg-gradient-to-b from-background to-muted/10 hover:shadow-md transition-all">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="size-12 rounded-full bg-red-600 flex items-center justify-center text-white font-bold">
+                          {testimonial.avatar}
+                        </div>
+                        <div>
+                          <p className="font-bold">{testimonial.name}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.channel}</p>
+                        </div>
+                      </div>
+                      <div className="mb-4 px-3 py-2 rounded-lg bg-green-600/10 text-green-700 dark:text-green-400 text-sm font-semibold">
+                        ✓ {testimonial.result}
+                      </div>
+                      <div className="flex mb-3">
+                        {Array(5).fill(0).map((_, j) => (
+                          <Star key={j} className="size-4 text-yellow-500 fill-yellow-500" />
+                        ))}
+                      </div>
+                      <p className="text-sm leading-relaxed flex-grow">{testimonial.quote}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Bonus Section */}
+        <section className="w-full py-20 md:py-32 bg-gradient-to-b from-muted/50 to-background">
+          <div className="container px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center mb-16"
+            >
+              <div className="inline-block px-4 py-2 rounded-full bg-red-600 text-white font-semibold mb-4">
+                🎁 EXCLUSIVE BONUSES
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Get $2,497 Worth of Bonuses</h2>
+              <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
+                When you enroll today, you'll get instant access to these premium bonuses
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {[
+                {
+                  title: "Viral Thumbnail Templates Pack",
+                  value: "$497",
+                  description: "200+ professionally designed thumbnail templates in Photoshop and Canva formats",
+                  icon: <Zap className="size-6" />
+                },
+                {
+                  title: "Copyright-Free Music Library",
+                  value: "$297",
+                  description: "1,000+ royalty-free music tracks and sound effects for your videos",
+                  icon: <PlayCircle className="size-6" />
+                },
+                {
+                  title: "Video Script Templates",
+                  value: "$197",
+                  description: "50+ proven video script templates for different niches and video types",
+                  icon: <Star className="size-6" />
+                },
+                {
+                  title: "YouTube SEO Tool Suite",
+                  value: "$697",
+                  description: "Premium keyword research tools and analytics dashboard (1-year access)",
+                  icon: <TrendingUp className="size-6" />
+                },
+                {
+                  title: "Monthly Live Q&A Sessions",
+                  value: "$497",
+                  description: "Direct access to me in live coaching calls every month (Lifetime access)",
+                  icon: <Users className="size-6" />
+                },
+                {
+                  title: "Private Discord Community",
+                  value: "$297",
+                  description: "Network with 5,000+ creators, find collaborators, and get daily support",
+                  icon: <Shield className="size-6" />
+                },
+              ].map((bonus, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                >
+                  <Card className="overflow-hidden border-2 border-red-600/20 bg-background hover:border-red-600/40 hover:shadow-lg transition-all">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="size-12 rounded-lg bg-red-600/10 flex items-center justify-center text-red-600 shrink-0">
+                          {bonus.icon}
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-2">
+                            <h3 className="text-lg font-bold">{bonus.title}</h3>
+                            <span className="text-sm font-bold text-red-600">{bonus.value}</span>
+                          </div>
+                          <p className="text-sm text-muted-foreground">{bonus.description}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-center mt-12"
+            >
+              <p className="text-2xl font-bold mb-2">Total Bonus Value: <span className="text-red-600">$2,497</span></p>
+              <p className="text-muted-foreground">All included FREE when you join today</p>
             </motion.div>
           </div>
         </section>
