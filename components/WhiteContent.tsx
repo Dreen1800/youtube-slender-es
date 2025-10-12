@@ -64,33 +64,33 @@ export default function WhiteContent() {
 
   const features = [
     {
-      title: "Proven Strategies",
-      description: "Learn the exact tactics that generated millions of views on real channels.",
+      title: "Peak Health & Fitness",
+      description: "Optimize your physical health with expert nutrition, training, and recovery protocols.",
       icon: <Zap className="size-5" />,
     },
     {
-      title: "Data Analysis",
-      description: "Master YouTube Analytics and make decisions based on real metrics.",
+      title: "Productivity Mastery",
+      description: "Learn systems and habits used by top performers to maximize output and focus.",
       icon: <BarChart className="size-5" />,
     },
     {
-      title: "Exclusive Community",
-      description: "Connect with other creators and exchange experiences in real time.",
+      title: "Elite Community",
+      description: "Network with ambitious high-performers and build lasting partnerships.",
       icon: <Users className="size-5" />,
     },
     {
-      title: "Fast Monetization",
-      description: "Strategies to reach monetization requirements faster.",
+      title: "Wealth Building",
+      description: "Master financial strategies, investments, and wealth creation principles.",
       icon: <Shield className="size-5" />,
     },
     {
-      title: "Premium Tools",
-      description: "Access to templates, scripts and exclusive tools for creators.",
+      title: "Mental Performance",
+      description: "Develop unshakeable mindset, resilience, and emotional intelligence.",
       icon: <Layers className="size-5" />,
     },
     {
-      title: "Lifetime Support",
-      description: "Direct support from me and constant content updates.",
+      title: "Expert Coaching",
+      description: "Direct access to coaches and specialists across all life domains.",
       icon: <Star className="size-5" />,
     },
   ]
@@ -102,10 +102,10 @@ export default function WhiteContent() {
       >
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2 font-bold text-xl">
-            <div className="size-10 rounded-lg bg-gradient-to-br from-red-600 to-red-500 flex items-center justify-center text-white">
-              ▶
+            <div className="size-10 rounded-lg bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center text-white">
+              👑
             </div>
-            <span>YouTube Master</span>
+            <span>ROYAL PASS</span>
           </div>
           <nav className="hidden md:flex gap-8">
             <Link
@@ -128,8 +128,8 @@ export default function WhiteContent() {
             </Link>
           </nav>
           <div className="hidden md:flex gap-4 items-center">
-            <Button className="rounded-full bg-red-600 hover:bg-red-700">
-              Get Started Now
+            <Button className="rounded-full bg-purple-600 hover:bg-purple-700">
+              Join Now
               <ChevronRight className="ml-1 size-4" />
             </Button>
           </div>
@@ -159,8 +159,8 @@ export default function WhiteContent() {
                 Pricing
               </Link>
               <div className="flex flex-col gap-2 pt-2 border-t">
-                <Button className="rounded-full bg-red-600 hover:bg-red-700">
-                  Get Started Now
+                <Button className="rounded-full bg-purple-600 hover:bg-purple-700">
+                  Join Now
                   <ChevronRight className="ml-1 size-4" />
                 </Button>
               </div>
@@ -180,23 +180,23 @@ export default function WhiteContent() {
               transition={{ duration: 0.5 }}
               className="text-center max-w-4xl mx-auto mb-12"
             >
-              <div className="inline-block bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                🔥 Over 5,000 students have already transformed their channels
+              <div className="inline-block bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                👑 Over 5,000 members have already transformed their lives
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-orange-600">
-                Transform Your Channel Into A View-Getting Machine
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+                Elevate Every Area of Your Life
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                Learn the exact method I used to grow from 0 to 1 million subscribers on YouTube.
-                No secrets, no tricks - just proven strategies that work in 2025.
+                Join the elite high-performance community where ambitious individuals master health, productivity, wealth, and personal growth.
+                ROYAL PASS is your gateway to excellence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="rounded-full h-14 px-10 text-lg bg-red-600 hover:bg-red-700 shadow-lg shadow-red-600/30">
-                  Secure My Spot Now
+                <Button size="lg" className="rounded-full h-14 px-10 text-lg bg-purple-600 hover:bg-purple-700 shadow-lg shadow-purple-600/30">
+                  Secure My Membership
                   <ArrowRight className="ml-2 size-5" />
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full h-14 px-10 text-lg border-2">
-                  View Course Content
+                  Explore Benefits
                 </Button>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-sm text-muted-foreground">
@@ -233,10 +233,10 @@ export default function WhiteContent() {
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               {[
-                { number: "5,000+", label: "Active Students" },
-                { number: "50M+", label: "Views Generated" },
-                { number: "100K+", label: "Subscribers Gained" },
-                { number: "4.9/5", label: "Average Rating" },
+                { number: "5,000+", label: "Elite Members" },
+                { number: "95%", label: "Success Rate" },
+                { number: "7", label: "Life Areas Covered" },
+                { number: "4.9/5", label: "Member Satisfaction" },
               ].map((stat, i) => (
                 <motion.div
                   key={i}
@@ -246,7 +246,7 @@ export default function WhiteContent() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="text-center"
                 >
-                  <p className="text-4xl md:text-5xl font-bold text-red-600 mb-2">{stat.number}</p>
+                  <p className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat.number}</p>
                   <p className="text-sm md:text-base text-muted-foreground">{stat.label}</p>
                 </motion.div>
               ))}
@@ -266,7 +266,7 @@ export default function WhiteContent() {
             >
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">What You'll Master</h2>
               <p className="max-w-[800px] text-muted-foreground md:text-lg">
-                A complete step-by-step method to transform your YouTube channel into a consistent and scalable income source.
+                A comprehensive high-performance program covering every area of life - from peak health to maximum productivity and beyond.
               </p>
             </motion.div>
 
@@ -294,7 +294,7 @@ export default function WhiteContent() {
           </div>
         </section>
 
-        {/* Course Curriculum Section */}
+        {/* Program Content Section */}
         <section className="w-full py-20 md:py-32 bg-muted/30">
           <div className="container px-4 md:px-6">
             <motion.div
@@ -304,69 +304,62 @@ export default function WhiteContent() {
               transition={{ duration: 0.5 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Complete Course Curriculum</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Complete Program Pillars</h2>
               <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
-                Over 50 hours of content divided into 8 comprehensive modules
+                7 fundamental pillars for total life transformation
               </p>
             </motion.div>
 
             <div className="max-w-4xl mx-auto space-y-4">
               {[
                 {
-                  module: "Module 1",
-                  title: "YouTube Foundation & Channel Setup",
-                  lessons: "12 lessons • 4.5 hours",
+                  module: "Pillar 1",
+                  title: "Health & Fitness Excellence",
+                  lessons: "Weekly coaching calls",
                   icon: <Rocket className="size-6" />,
-                  topics: ["Channel branding", "Niche selection", "Equipment basics", "YouTube Studio walkthrough"]
+                  topics: ["Nutrition optimization", "Training protocols", "Sleep mastery", "Longevity strategies"]
                 },
                 {
-                  module: "Module 2",
-                  title: "Content Strategy & Viral Video Formula",
-                  lessons: "15 lessons • 6 hours",
+                  module: "Pillar 2",
+                  title: "Peak Productivity Systems",
+                  lessons: "Daily challenges",
                   icon: <Target className="size-6" />,
-                  topics: ["Viral video psychology", "Trending topic research", "Content calendar creation", "Video ideation techniques"]
+                  topics: ["Time management", "Focus techniques", "Energy optimization", "Goal achievement"]
                 },
                 {
-                  module: "Module 3",
-                  title: "Video Production Mastery",
-                  lessons: "18 lessons • 7 hours",
-                  icon: <PlayCircle className="size-6" />,
-                  topics: ["Filming techniques", "Audio quality", "Lighting setup", "Editing workflows"]
-                },
-                {
-                  module: "Module 4",
-                  title: "YouTube SEO & Algorithm Secrets",
-                  lessons: "10 lessons • 5 hours",
-                  icon: <TrendingUp className="size-6" />,
-                  topics: ["Keyword research", "Title optimization", "Tag strategies", "Algorithm understanding"]
-                },
-                {
-                  module: "Module 5",
-                  title: "Thumbnail & Title Psychology",
-                  lessons: "8 lessons • 3.5 hours",
-                  icon: <Zap className="size-6" />,
-                  topics: ["Click-worthy thumbnails", "A/B testing", "Color psychology", "Design principles"]
-                },
-                {
-                  module: "Module 6",
-                  title: "Audience Growth & Engagement",
-                  lessons: "14 lessons • 5.5 hours",
-                  icon: <Users className="size-6" />,
-                  topics: ["Community building", "Comment strategies", "Collaboration tactics", "Cross-promotion"]
-                },
-                {
-                  module: "Module 7",
-                  title: "Monetization & Revenue Streams",
-                  lessons: "16 lessons • 6.5 hours",
+                  module: "Pillar 3",
+                  title: "Wealth & Financial Mastery",
+                  lessons: "Expert workshops",
                   icon: <DollarSign className="size-6" />,
-                  topics: ["AdSense optimization", "Sponsorship deals", "Affiliate marketing", "Digital products"]
+                  topics: ["Investment strategies", "Business growth", "Passive income", "Financial freedom"]
                 },
                 {
-                  module: "Module 8",
-                  title: "Analytics & Scaling Your Channel",
-                  lessons: "12 lessons • 5 hours",
+                  module: "Pillar 4",
+                  title: "Mental Performance & Mindset",
+                  lessons: "Mindset sessions",
+                  icon: <TrendingUp className="size-6" />,
+                  topics: ["Resilience building", "Confidence mastery", "Stress management", "Peak state control"]
+                },
+                {
+                  module: "Pillar 5",
+                  title: "Relationship & Social Mastery",
+                  lessons: "Group sessions",
+                  icon: <Users className="size-6" />,
+                  topics: ["Communication skills", "Leadership development", "Networking mastery", "Influence tactics"]
+                },
+                {
+                  module: "Pillar 6",
+                  title: "Career & Professional Growth",
+                  lessons: "Career coaching",
                   icon: <Trophy className="size-6" />,
-                  topics: ["Data interpretation", "Growth metrics", "Team building", "Automation strategies"]
+                  topics: ["Career strategy", "Personal branding", "Skill development", "Industry mastery"]
+                },
+                {
+                  module: "Pillar 7",
+                  title: "Purpose & Life Design",
+                  lessons: "Vision workshops",
+                  icon: <Zap className="size-6" />,
+                  topics: ["Life purpose", "Vision clarity", "Legacy building", "Fulfillment strategies"]
                 },
               ].map((module, i) => (
                 <motion.div
@@ -379,12 +372,12 @@ export default function WhiteContent() {
                   <Card className="overflow-hidden border-border/40 bg-background hover:shadow-lg transition-all">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="size-12 rounded-lg bg-red-600/10 flex items-center justify-center text-red-600 shrink-0">
+                        <div className="size-12 rounded-lg bg-purple-600/10 flex items-center justify-center text-purple-600 shrink-0">
                           {module.icon}
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center gap-3 mb-2">
-                            <span className="text-sm font-semibold text-red-600">{module.module}</span>
+                            <span className="text-sm font-semibold text-purple-600">{module.module}</span>
                             <span className="text-xs text-muted-foreground">{module.lessons}</span>
                           </div>
                           <h3 className="text-lg font-bold mb-3">{module.title}</h3>
@@ -410,9 +403,9 @@ export default function WhiteContent() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-center mt-12"
             >
-              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-600/10 text-red-600 font-semibold">
+              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600/10 text-purple-600 font-semibold">
                 <Trophy className="size-5" />
-                <span>50+ Hours of Content • Lifetime Updates Included</span>
+                <span>All 7 Pillars • Lifetime Membership</span>
               </div>
             </motion.div>
           </div>
@@ -428,9 +421,9 @@ export default function WhiteContent() {
               transition={{ duration: 0.5 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Success Stories From Our Students</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Success Stories From Our Members</h2>
               <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
-                Real results from real creators who transformed their channels
+                Real transformations from high-performers who elevated every area of their lives
               </p>
             </motion.div>
 
@@ -438,44 +431,44 @@ export default function WhiteContent() {
               {[
                 {
                   name: "Sarah Johnson",
-                  channel: "Tech Tips Daily",
-                  result: "0 to 250K subscribers in 8 months",
-                  quote: "This course gave me the exact roadmap I needed. My channel went from zero to monetized in just 3 months, and now I'm making $8K/month from YouTube alone!",
+                  channel: "Tech Entrepreneur",
+                  result: "Lost 30lbs, 2x income, launched startup",
+                  quote: "ROYAL PASS transformed everything. I optimized my health, doubled my income, and finally launched my dream business. The accountability and community are unmatched.",
                   avatar: "SJ"
                 },
                 {
                   name: "Michael Chen",
-                  channel: "Finance Freedom",
-                  result: "100K to 1M subscribers in 1 year",
-                  quote: "The monetization module alone was worth 10x the course price. I implemented the strategies and tripled my revenue within 60 days.",
+                  channel: "Investment Banker",
+                  result: "Peak performance across all areas",
+                  quote: "As a high-achiever, I thought I had it figured out. ROYAL PASS showed me how much more was possible. My energy, focus, and results skyrocketed.",
                   avatar: "MC"
                 },
                 {
                   name: "Emma Rodriguez",
-                  channel: "Cooking with Emma",
-                  result: "5K to 500K subscribers",
-                  quote: "I was stuck at 5,000 subscribers for 2 years. After applying the viral video formula from Module 2, I gained 495K subscribers in just 10 months!",
+                  channel: "Marketing Executive",
+                  result: "Promoted to VP in 6 months",
+                  quote: "The productivity and career pillars gave me the edge I needed. I went from manager to VP in 6 months while maintaining work-life balance.",
                   avatar: "ER"
                 },
                 {
                   name: "David Kim",
-                  channel: "Fitness Pro",
-                  result: "First video hit 2M views",
-                  quote: "The thumbnail psychology section is pure gold. My first video after the course hit 2 million views and changed my life forever.",
+                  channel: "Fitness Coach",
+                  result: "Built 6-figure online business",
+                  quote: "The wealth-building strategies combined with health optimization helped me scale my coaching business to 6 figures while staying in peak shape.",
                   avatar: "DK"
                 },
                 {
                   name: "Lisa Anderson",
-                  channel: "Travel Adventures",
-                  result: "Making $15K/month",
-                  quote: "I quit my 9-5 job thanks to this course. Now I'm traveling the world full-time and making $15K per month from my YouTube channel.",
+                  channel: "Digital Nomad",
+                  result: "Location-free lifestyle achieved",
+                  quote: "ROYAL PASS gave me the systems to build a location-independent business. Now I travel the world while maintaining peak performance and growing my wealth.",
                   avatar: "LA"
                 },
                 {
                   name: "James Wilson",
-                  channel: "Gaming Legends",
-                  result: "800K subscribers gained",
-                  quote: "Best investment I ever made. The community alone is worth it - I've collaborated with other students and grown my channel to 800K subscribers.",
+                  channel: "Tech Founder",
+                  result: "Raised $2M seed round",
+                  quote: "The network alone is worth 10x the membership. I met my co-founder and key investors through ROYAL PASS. Game-changing community.",
                   avatar: "JW"
                 },
               ].map((testimonial, i) => (
@@ -489,7 +482,7 @@ export default function WhiteContent() {
                   <Card className="h-full overflow-hidden border-border/40 bg-gradient-to-b from-background to-muted/10 hover:shadow-md transition-all">
                     <CardContent className="p-6 flex flex-col h-full">
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="size-12 rounded-full bg-red-600 flex items-center justify-center text-white font-bold">
+                        <div className="size-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold">
                           {testimonial.avatar}
                         </div>
                         <div>
@@ -524,52 +517,52 @@ export default function WhiteContent() {
               transition={{ duration: 0.5 }}
               className="text-center mb-16"
             >
-              <div className="inline-block px-4 py-2 rounded-full bg-red-600 text-white font-semibold mb-4">
-                🎁 EXCLUSIVE BONUSES
+              <div className="inline-block px-4 py-2 rounded-full bg-purple-600 text-white font-semibold mb-4">
+                👑 EXCLUSIVE MEMBER BENEFITS
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Get $2,497 Worth of Bonuses</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">$15,000+ in Premium Resources</h2>
               <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">
-                When you enroll today, you'll get instant access to these premium bonuses
+                When you join ROYAL PASS today, you'll get instant access to these exclusive benefits
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {[
                 {
-                  title: "Viral Thumbnail Templates Pack",
-                  value: "$497",
-                  description: "200+ professionally designed thumbnail templates in Photoshop and Canva formats",
+                  title: "Weekly Expert Coaching Calls",
+                  value: "$5,997",
+                  description: "Live coaching from industry experts across health, wealth, productivity, and mindset",
                   icon: <Zap className="size-6" />
                 },
                 {
-                  title: "Copyright-Free Music Library",
-                  value: "$297",
-                  description: "1,000+ royalty-free music tracks and sound effects for your videos",
+                  title: "Premium Resource Vault",
+                  value: "$2,997",
+                  description: "500+ templates, worksheets, protocols, and tools for all life areas",
                   icon: <PlayCircle className="size-6" />
                 },
                 {
-                  title: "Video Script Templates",
-                  value: "$197",
-                  description: "50+ proven video script templates for different niches and video types",
-                  icon: <Star className="size-6" />
-                },
-                {
-                  title: "YouTube SEO Tool Suite",
-                  value: "$697",
-                  description: "Premium keyword research tools and analytics dashboard (1-year access)",
-                  icon: <TrendingUp className="size-6" />
-                },
-                {
-                  title: "Monthly Live Q&A Sessions",
-                  value: "$497",
-                  description: "Direct access to me in live coaching calls every month (Lifetime access)",
+                  title: "Elite Mastermind Network",
+                  value: "$3,997",
+                  description: "Connect with 5,000+ high-performers, entrepreneurs, and industry leaders",
                   icon: <Users className="size-6" />
                 },
                 {
-                  title: "Private Discord Community",
-                  value: "$297",
-                  description: "Network with 5,000+ creators, find collaborators, and get daily support",
+                  title: "24/7 Accountability System",
+                  value: "$997",
+                  description: "Daily check-ins, progress tracking, and peer accountability partnerships",
                   icon: <Shield className="size-6" />
+                },
+                {
+                  title: "Monthly Guest Expert Sessions",
+                  value: "$1,497",
+                  description: "Learn from world-class performers, CEOs, athletes, and thought leaders",
+                  icon: <Star className="size-6" />
+                },
+                {
+                  title: "Personalized Growth Roadmap",
+                  value: "$497",
+                  description: "Custom 90-day plan tailored to your goals across all 7 life pillars",
+                  icon: <TrendingUp className="size-6" />
                 },
               ].map((bonus, i) => (
                 <motion.div
@@ -579,16 +572,16 @@ export default function WhiteContent() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
-                  <Card className="overflow-hidden border-2 border-red-600/20 bg-background hover:border-red-600/40 hover:shadow-lg transition-all">
+                  <Card className="overflow-hidden border-2 border-purple-600/20 bg-background hover:border-purple-600/40 hover:shadow-lg transition-all">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="size-12 rounded-lg bg-red-600/10 flex items-center justify-center text-red-600 shrink-0">
+                        <div className="size-12 rounded-lg bg-purple-600/10 flex items-center justify-center text-purple-600 shrink-0">
                           {bonus.icon}
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-2">
                             <h3 className="text-lg font-bold">{bonus.title}</h3>
-                            <span className="text-sm font-bold text-red-600">{bonus.value}</span>
+                            <span className="text-sm font-bold text-purple-600">{bonus.value}</span>
                           </div>
                           <p className="text-sm text-muted-foreground">{bonus.description}</p>
                         </div>
@@ -606,8 +599,8 @@ export default function WhiteContent() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="text-center mt-12"
             >
-              <p className="text-2xl font-bold mb-2">Total Bonus Value: <span className="text-red-600">$2,497</span></p>
-              <p className="text-muted-foreground">All included FREE when you join today</p>
+              <p className="text-2xl font-bold mb-2">Total Value: <span className="text-purple-600">$15,982</span></p>
+              <p className="text-muted-foreground">All included with your ROYAL PASS membership</p>
             </motion.div>
           </div>
         </section>
@@ -627,20 +620,20 @@ export default function WhiteContent() {
               className="flex flex-col items-center justify-center space-y-6 text-center"
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-                Ready To Explode On YouTube?
+                Ready To Join The Elite?
               </h2>
               <p className="mx-auto max-w-[700px] text-primary-foreground/80 md:text-xl">
-                Join over 5,000 creators who have already transformed their channels into profitable businesses using this proven method.
+                Join over 5,000 high-performers who have elevated every area of their lives through ROYAL PASS.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <Button size="lg" variant="secondary" className="rounded-full h-14 px-10 text-lg shadow-lg">
-                  Get Lifetime Access
+                  Claim Your Membership
                   <ArrowRight className="ml-2 size-5" />
                 </Button>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mt-6 max-w-md">
-                <p className="text-2xl font-bold mb-2">Only $497</p>
-                <p className="text-sm text-primary-foreground/80">or 12 payments of $49.70</p>
+                <p className="text-2xl font-bold mb-2">Only $37</p>
+                <p className="text-sm text-primary-foreground/80">Limited time offer - Join today</p>
                 <div className="flex items-center justify-center gap-2 mt-4 text-sm">
                   <Shield className="size-4" />
                   <span>Unconditional 30-day guarantee</span>
@@ -655,31 +648,31 @@ export default function WhiteContent() {
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
             <div className="space-y-4">
               <div className="flex items-center gap-2 font-bold text-xl">
-                <div className="size-10 rounded-lg bg-gradient-to-br from-red-600 to-red-500 flex items-center justify-center text-white">
-                  ▶
+                <div className="size-10 rounded-lg bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center text-white">
+                  👑
                 </div>
-                <span>YouTube Master</span>
+                <span>ROYAL PASS</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                The complete course to transform your YouTube channel into a view-getting and monetization machine.
+                The elite high-performance community for ambitious individuals committed to mastering every area of life.
               </p>
             </div>
             <div className="space-y-4">
-              <h4 className="text-sm font-bold">Course</h4>
+              <h4 className="text-sm font-bold">Program</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Content
+                    Benefits
                   </Link>
                 </li>
                 <li>
                   <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Pricing
+                    Membership
                   </Link>
                 </li>
                 <li>
                   <Link href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Testimonials
+                    Success Stories
                   </Link>
                 </li>
               </ul>
@@ -722,10 +715,10 @@ export default function WhiteContent() {
           </div>
           <div className="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/40 pt-8">
             <p className="text-xs text-muted-foreground">
-              &copy; {new Date().getFullYear()} YouTube Master. All rights reserved.
+              &copy; {new Date().getFullYear()} ROYAL PASS. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground">
-              This product is not affiliated with YouTube or Google LLC.
+              Transform every area of your life. Join the elite.
             </p>
           </div>
         </div>

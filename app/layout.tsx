@@ -5,8 +5,8 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "YouTube Video Review",
-  description: "Earn money by rating YouTube videos",
+  title: "Course",
+  description: "Course",
     generator: 'v0.app'
 }
 
