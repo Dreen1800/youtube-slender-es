@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { loadVturbPlayer } from "@/utils/vturbLoader"
 
 // Declaração de tipos para elementos customizados
 declare global {
@@ -36,11 +37,9 @@ export default function FinalComponent({ balance }: FinalComponentProps) {
       console.log("UTM Parameters captured on final page:", currentSearchParams)
     }
 
-    // Adicionar script do vturb-smartplayer
-    const script = document.createElement("script")
-    script.src = "https://scripts.converteai.net/ff9f6de5-a5a0-4221-9188-aae68066cbeb/players/68ced59dc9c4c158bda75c09/v4/player.js"
-    script.async = true
-    document.head.appendChild(script)
+    // Carregar script do vturb-smartplayer usando o sistema de carregamento único
+    loadVturbPlayer('68ced59dc9c4c158bda75c09', 'ff9f6de5-a5a0-4221-9188-aae68066cbeb')
+      .catch(error => console.error("Erro ao carregar Vturb player:", error))
 
     // Delay para garantir que scripts externos sejam carregados primeiro
     const timer = setTimeout(() => {
@@ -71,11 +70,6 @@ export default function FinalComponent({ balance }: FinalComponentProps) {
 
     return () => {
       clearTimeout(timer)
-      // Cleanup: remover script quando componente for desmontado
-      const existingScript = document.querySelector(`script[src="${script.src}"]`)
-      if (existingScript) {
-        document.head.removeChild(existingScript)
-      }
     }
   }, [])
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { loadVturbPlayer } from "@/utils/vturbLoader"
 
 // Declaração de tipos para elementos customizados
 declare global {
@@ -36,6 +37,10 @@ export default function GrayFinalComponent({ balance }: GrayFinalComponentProps)
       console.log("UTM Parameters captured on gray final page:", currentSearchParams)
     }
 
+    // Carregar script do vturb-smartplayer usando o sistema de carregamento único
+    loadVturbPlayer('68ac5c2e6b5c074f453c56cd', 'ff9f6de5-a5a0-4221-9188-aae68066cbeb')
+      .catch(error => console.error("Erro ao carregar Vturb player (Gray):", error))
+
     // Delay para garantir que scripts externos sejam carregados primeiro
     const timer = setTimeout(() => {
       // Dispara evento de conversão com Facebook Pixel (Gray Content)
@@ -62,26 +67,6 @@ export default function GrayFinalComponent({ balance }: GrayFinalComponentProps)
         console.warn("Utmify not available:", error)
       }
     }, 2000) // Delay de 2 segundos
-
-    // Carregamento do script do player ConvertEai específico para Gray Content
-    const loadPlayerScript = () => {
-      try {
-        const existingScript = document.querySelector('script[src*="68ac5c2e6b5c074f453c56cd"]')
-        if (!existingScript) {
-          const s = document.createElement("script")
-          s.type = "text/javascript"
-          s.src = "https://scripts.converteai.net/ff9f6de5-a5a0-4221-9188-aae68066cbeb/players/68ac5c2e6b5c074f453c56cd/v4/player.js"
-          s.async = true
-          s.onload = () => console.log("ConvertEai Gray player script loaded successfully")
-          s.onerror = () => console.error("Failed to load ConvertEai Gray player script")
-          document.head.appendChild(s)
-        }
-      } catch (error) {
-        console.error("Error loading ConvertEai Gray player script:", error)
-      }
-    }
-
-    loadPlayerScript()
 
     return () => {
       clearTimeout(timer)
